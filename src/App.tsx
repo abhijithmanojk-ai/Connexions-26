@@ -32,7 +32,6 @@ export default function App() {
     return INITIAL_EVENTS;
   });
 
-  const [selectedTeam, setSelectedTeam] = useState<'all' | 'Ferrari' | 'RedBull'>('all');
   const [briefingEvent, setBriefingEvent] = useState<EventDetail | null>(null);
   const [registerEvent, setRegisterEvent] = useState<EventDetail | null>(null);
   const [isRuleBookModalOpen, setIsRuleBookModalOpen] = useState(false);
@@ -65,14 +64,13 @@ export default function App() {
       {/* Main Content Sections */}
       <main className="flex-1">
         {/* 1. Hero Section with F1 Starting Lights & 14th Oct Countdown */}
-        <HeroSection 
+        <HeroSection
           onOpenRuleBook={() => setIsRuleBookModalOpen(true)}
-
+        />
 
         {/* 3. The 8 Clickable Events Leading to Google Forms */}
-        <EventsGrid 
+        <EventsGrid
           events={events}
-          selectedTeam={selectedTeam}
           onSelectEventForBriefing={(evt) => setBriefingEvent(evt)}
           onSelectEventForRegistration={(evt) => setRegisterEvent(evt)}
           onOpenConfig={() => handleOpenConfigWithTarget()}

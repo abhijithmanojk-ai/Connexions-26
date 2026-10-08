@@ -5,7 +5,6 @@ import { f1Audio } from '../utils/f1Audio';
 
 interface EventsGridProps {
   events: EventDetail[];
-  selectedTeam: 'all' | 'Ferrari' | 'RedBull';
   onSelectEventForBriefing: (event: EventDetail) => void;
   onSelectEventForRegistration: (event: EventDetail) => void;
   onOpenConfig: () => void;
@@ -13,7 +12,6 @@ interface EventsGridProps {
 
 export default function EventsGrid({
   events,
-  selectedTeam,
   onSelectEventForBriefing,
   onSelectEventForRegistration,
   onOpenConfig
@@ -24,10 +22,6 @@ export default function EventsGrid({
   const categories = ['All', 'Title Event', 'Trivia & Intel', 'Media & Broadcasting', 'Literary & Debate', 'Theatrics & Roleplay', 'Analytical & Forensics', 'Design & Creative', 'Visual Arts'];
 
   const filteredEvents = events.filter((evt) => {
-    // Filter by team if not all
-    if (selectedTeam !== 'all' && evt.ferrariOrRedBull !== selectedTeam) {
-      return false;
-    }
     // Filter by category
     if (selectedCategory !== 'All' && evt.category !== selectedCategory) {
       return false;

@@ -50,15 +50,7 @@ export default function EventsGrid({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-neutral-800">
-          <div>
-            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2">
-              <span className="text-[#e10600]">STARTING GRID</span>
-              <span aria-hidden="true">·</span>
-              <span>8 CHAMPIONSHIP EVENTS</span>
-              <span aria-hidden="true">·</span>
-              <span className="text-[#fcd500]">GOOGLE FORMS PORTAL</span>
-            </div>
+      
             <h2 className="text-3xl sm:text-5xl font-black text-white font-racing tracking-tight uppercase">
               The 8 Championship Events
             </h2>

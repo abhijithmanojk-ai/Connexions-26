@@ -6,7 +6,6 @@
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
-import FerrariVsRedbullToggle from './components/FerrariVsRedbullToggle';
 import EventsGrid from './components/EventsGrid';
 import RuleBookSection from './components/RuleBookSection';
 import ScheduleSection from './components/ScheduleSection';
@@ -68,13 +67,7 @@ export default function App() {
         {/* 1. Hero Section with F1 Starting Lights & 14th Oct Countdown */}
         <HeroSection 
           onOpenRuleBook={() => setIsRuleBookModalOpen(true)}
-        />
 
-        {/* 2. Ferrari vs Red Bull Paddock Rivalry Bar */}
-        <FerrariVsRedbullToggle 
-          selectedTeam={selectedTeam}
-          onSelectTeam={setSelectedTeam}
-        />
 
         {/* 3. The 8 Clickable Events Leading to Google Forms */}
         <EventsGrid 

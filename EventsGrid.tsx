@@ -49,16 +49,6 @@ export default function EventsGrid({
     <section id="events" className="py-16 sm:py-20 bg-[#07090e] border-b border-neutral-800 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
-      
-            <h2 className="text-3xl sm:text-5xl font-black text-white font-racing tracking-tight uppercase">
-              The 8 Championship Events
-            </h2>
-            <p className="mt-2 text-sm sm:text-base text-neutral-400 max-w-2xl">
-              Click on any event below to access its official Google Form registration portal or review its detailed rules dossier.
-            </p>
-          </div>
-
           <div className="flex items-center gap-3">
             <button
               onClick={onOpenConfig}
